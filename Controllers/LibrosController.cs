@@ -25,7 +25,7 @@ namespace CRUD_Basico.Controllers
         {
             using (DbModels context = new DbModels())
             {
-                return View(context.libros.Where(x => x.id == id));
+                return View(context.libros.Where(x => x.id == id).FirstOrDefault());
             }
         }
 
